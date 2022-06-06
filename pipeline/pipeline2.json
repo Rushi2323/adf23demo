@@ -1,0 +1,87 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "datasetsqltable",
+						"type": "DatasetReference",
+						"parameters": {
+							"tabelname": {
+								"value": "@pipeline().parameters.sourcetable",
+								"type": "Expression"
+							},
+							"dbanme": {
+								"value": "@pipeline().parameters.dbnamefrompipe",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "datasetsqltable",
+						"type": "DatasetReference",
+						"parameters": {
+							"tabelname": {
+								"value": "@pipeline().parameters.destinationtable",
+								"type": "Expression"
+							},
+							"dbanme": {
+								"value": "@pipeline().parameters.dbnamefrompipe",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"parameters": {
+			"sourcetable": {
+				"type": "string"
+			},
+			"dbnamefrompipe": {
+				"type": "string"
+			},
+			"destinationtable": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-05-31T03:10:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

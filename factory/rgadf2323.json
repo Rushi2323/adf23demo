@@ -1,0 +1,9 @@
+{
+	"name": "rgadf2323",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a63a4ad2-1410-41e9-9ee0-c7fc9f45def4",
+		"tenantId": "50c8561e-4376-4ba6-8fcd-98b17f242e2a"
+	}
+}
