@@ -1,0 +1,16 @@
+{
+	"name": "lponprem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-THCMRNU;initial catalog=rg2323;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3NGQ2MjUzNy1hZWJiLTRlNzEtYWY3NS04ZWIwN2VmOTFiYjkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-rg232323",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
