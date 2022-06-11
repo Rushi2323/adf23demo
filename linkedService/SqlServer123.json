@@ -1,0 +1,17 @@
+{
+	"name": "SqlServer123",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DESKTOP-THCMRNU;initial catalog=rg2323",
+			"userName": "sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmZDNiM2JjZi0wZTdjLTRmNDUtYmE0ZC0wOTM2YmQ5ZGFmY2UiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-rg232323",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
