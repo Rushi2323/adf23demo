@@ -1,0 +1,16 @@
+{
+	"name": "onpremsql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lponprem",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TBL_SALES"
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "salesdata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedservice_rg23",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "output23.csv",
+				"folderPath": "output",
+				"container": "rgcontainer23"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
